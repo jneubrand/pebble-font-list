@@ -6,7 +6,6 @@
             body {
                 font-size: 0.9em;
                 font-family: -apple-system, sans-serif;
-                padding-bottom: 5em;
             }
             td {
                 vertical-align: middle;
@@ -16,15 +15,50 @@
                 padding: 1em;
                 position: relative;
             }
+            tr:last-child td {
+                border-bottom: none;
+            }
             td:not(:last-child) {
                 border-right: 1px dotted gainsboro;
             }
             h1 {
-                vertical-align: middle;
                 border-bottom: 1px solid gainsboro;
                 padding: 1.5em 1em 1em;
                 text-align: center;
                 font-weight: 900;
+            }
+            footer {
+                border-top: 1px solid gainsboro;
+                padding: 3em 1em 4em;
+                text-align: center;
+                font-weight: 900;
+            }
+            footer a {
+                display: inline-block;
+                background-color: gainsboro;
+                background-image: linear-gradient(to bottom, #DDDDDD, #CCCCCC);
+                padding: 2em;
+                border-radius: 2em 2em;
+                text-decoration: none;
+            }
+            footer a:active {
+                background-image: linear-gradient(to bottom, #CCCCCC, #BBBBBB);
+                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1)
+            }
+            footer a:focus {
+                outline: none;
+                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1)
+            }
+            footer span {
+                text-shadow: 0 1px 0 white;
+                color: #444444;
+            }
+            footer img {
+                vertical-align: middle;
+                height: 3em;
+                width: auto;
+                border-radius: 0.5em;
+                margin-right: 1em;
             }
             table {
                 margin: 0 auto;
@@ -209,6 +243,11 @@
         <td><img height="168" width="144" data-original="leco-42-num-num.png"/></td>
         <td><img height="168" width="144" data-original="leco-42-num-sym.png"/></td>
         <td><img height="168" width="144" data-original="leco-42-num-emo.png"/></td></tr></table>
+        <footer>
+            <a href="https://github.com/jneubrand">
+                <img data-original="jneubrand.png" id="avatar"/><span>@jneubrand</span>
+            </a>
+        </footer>
         <script type="text/javascript">
             var lazyloader = new LazyLoad({
                 throttle: 100
