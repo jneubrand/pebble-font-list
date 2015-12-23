@@ -1,335 +1,477 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pebble Fonts</title>
-        <style>
-            body {
-                font-size: 0.9em;
-                font-family: -apple-system, sans-serif;
-                margin: 0;
-            }
-            td {
-                vertical-align: middle;
-                font-weight: 900;
-                border: none;
-                border-bottom: 1px solid gainsboro;
-                padding: 1em;
-                position: relative;
-            }
-            td:not(:last-child) {
-                border-right: 1px dotted gainsboro;
-            }
-            tr:last-child td {
-                text-align: center;
-                border-bottom: none;
-                padding: 2em 0 6em;
-            }
-            tr:last-child td a {
-                font-style: italic;
-                font-weight: 100;
-            }
-            h1 {
-                font-size: 3rem;
-            }
-            #some-hidden-info {
-                display: none;
-                font-weight: 300;
-            }
-            #some-hidden-info a, td:last-child a {
-                color: black;
-                text-decoration: none;
-                border-bottom: 1px dotted #888888;
-            }
-            header {
-                border-bottom: 1px solid gainsboro;
-                padding: 1.5em 1em 1em;
-                text-align: center;
-                font-weight: 900;
-            }
-            footer {
-                border-top: 1px solid gainsboro;
-                padding: 4em 1em 4em;
-                text-align: center;
-                font-weight: 900;
-            }
-            a#me {
-                display: inline-block;
-                background-color: gainsboro;
-                background-image: linear-gradient(to bottom, #333, #222);
-                padding: 2em;
-                border-radius: 2em 2em;
-                text-decoration: none;
-            }
-            a#me:hover {
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
-            }
-            a#me:active {
-                background-image: linear-gradient(to bottom, #222, #111);
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
-            }
-            a#me:focus {
-                outline: none;
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
-            }
-            a#me span {
-                text-shadow: 0 2px 0 black;
-                color: #EEEEEE;
-            }
-            a#me img {
-                vertical-align: middle;
-                height: 3em;
-                width: auto;
-                border-radius: 0.5em;
-                margin-right: 1em;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1)
-            }
-            table {
-                margin: 0 auto;
-                border-collapse: collapse;
-            }
-            img.loading {
-                box-shadow: 0 0 10px 0 gainsboro;
-            }
-            a.anchor {
-                vertical-align: -10%;
-                display: inline-block;
-                height: 1em;
-                width: 1em;
-                background-image: url(iconmonstr-link-icon.svg);
-                background-size: contain;
-                opacity: 0.2;
-                margin-left: -0.6em;
-                margin-right: 0.4em;
-            }
-            a.anchor:hover, a.anchor:focus {
-                opacity: 0.4;
-            }
-            a.anchor:active {
-                opacity: 0.6;
-            }
+
+<head>
+    <title>Pebble Fonts</title>
+    <style>
+        body {
+            font-size: 0.9em;
+            font-family: -apple-system, sans-serif;
+            margin: 0;
+        }
+        
+        td {
+            vertical-align: middle;
+            font-weight: 900;
+            border: none;
+            border-bottom: 1px solid gainsboro;
+            padding: 1em;
+            position: relative;
+        }
+        
+        td:not(:last-child) {
+            border-right: 1px dotted gainsboro;
+        }
+        
+        tr:last-child td {
+            text-align: center;
+            border-bottom: none;
+            padding: 2em 0 6em;
+        }
+        
+        tr:last-child td a {
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        h1 {
+            font-size: 3rem;
+        }
+        
+        #some-hidden-info {
+            display: none;
+            font-weight: 300;
+        }
+        
+        #some-hidden-info a,
+        td:last-child a {
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px dotted #888888;
+        }
+        
+        header {
+            border-bottom: 1px solid gainsboro;
+            padding: 1.5em 1em 1em;
+            text-align: center;
+            font-weight: 900;
+        }
+        
+        footer {
+            border-top: 1px solid gainsboro;
+            padding: 4em 1em 4em;
+            text-align: center;
+            font-weight: 900;
+        }
+        
+        a#me {
+            display: inline-block;
+            background-color: gainsboro;
+            background-image: linear-gradient(to bottom, #333, #222);
+            padding: 2em;
+            border-radius: 2em 2em;
+            text-decoration: none;
+        }
+        
+        a#me:hover {
+            box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
+        }
+        
+        a#me:active {
+            background-image: linear-gradient(to bottom, #222, #111);
+            box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
+        }
+        
+        a#me:focus {
+            outline: none;
+            box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
+        }
+        
+        a#me span {
+            text-shadow: 0 2px 0 black;
+            color: #EEEEEE;
+        }
+        
+        a#me img {
+            vertical-align: middle;
+            height: 3em;
+            width: auto;
+            border-radius: 0.5em;
+            margin-right: 1em;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1)
+        }
+        
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        img.loading {
+            box-shadow: 0 0 10px 0 gainsboro;
+        }
+        
+        a.anchor {
+            vertical-align: -10%;
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            background-image: url(iconmonstr-link-icon.svg);
+            background-size: contain;
+            opacity: 0.2;
+            margin-left: -0.6em;
+            margin-right: 0.4em;
+        }
+        
+        a.anchor:hover,
+        a.anchor:focus {
+            opacity: 0.4;
+        }
+        
+        a.anchor:active {
+            opacity: 0.6;
+        }
+        
+        bookmark {
+            position: absolute;
+            right: 100%;
+            height: 28px;
+            line-height: 28px;
+            margin-top: calc((1em - 24px)/2);
+            padding: 0 8px;
+            background-color: darkred;
+            color: white;
+        }
+        
+        bookmark:before {
+            content: " ";
+            height: 0;
+            display: inline-block;
+            position: absolute;
+            left: -14px;
+            z-index: -1;
+            border-top: 14px solid darkred;
+            border-right: none;
+            border-bottom: 14px solid darkred;
+            border-left: 14px solid transparent;
+        }
+        
+        bookmark:after {
+            content: " ";
+            height: 48px;
+            width: 10px;
+            box-shadow: -5px 0 3px -4px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background-color: transparent;
+        }
+        
+        grayed {
+            color: #BBBBBB;
+            font-weight: 200;
+        }
+        
+        @media (max-width: 1250px) {
             bookmark {
-                position: absolute;
-                right: 100%;
-                height: 28px;
-                line-height: 28px;
-                margin-top: calc((1em - 24px)/2);
-                padding: 0 8px;
-                background-color: darkred;
-                color: white;
+                position: static;
+                display: block;
+                margin: 0 -1em 1em -8px;
             }
             bookmark:before {
-                content: " ";
-                height: 0;
-                display: inline-block;
-                position: absolute;
-                left: -14px;
-                z-index: -1;
-                border-top: 14px solid darkred;
-                border-right: none;
-                border-bottom: 14px solid darkred;
-                border-left: 14px solid transparent;
-            }
-            bookmark:after {
-                content: " ";
-                height: 48px;
-                width: 10px;
-                box-shadow: -5px 0 3px -4px rgba(0, 0, 0, 0.2);
-                display: inline-block;
-                position: absolute;
-                right: -10px;
-                top: -10px;
-                background-color: transparent;
-            }
-            grayed {
-                color: #BBBBBB;
-                font-weight: 200;
-            }
-            @media (max-width: 1250px) {
-                bookmark {
-                    position: static;
-                    display: block;
-                    margin: 0 -1em 1em -8px;
-                }
-                bookmark:before {
-                    display: none;
-                }
-                bookmark:after {
-                    display: none;
-                }
-                a.anchor {
-                    position: absolute;
-                }
-                td grayed {
-                    margin-left: 0.8em;
-                }
-            }
-        </style>
-        <style id="no-chars-hide">
-            img[data-no-characters] {
                 display: none;
             }
-            #some-hidden-info {
-                display: block;
+            bookmark:after {
+                display: none;
             }
-        </style>
-    </head>
-    <body>
-        <script type="text/javascript" src="lazyload.js"></script>
-        <header>
-            <h1>
+            a.anchor {
+                position: absolute;
+            }
+            td grayed {
+                margin-left: 0.8em;
+            }
+        }
+    </style>
+    <style id="no-chars-hide">
+        img[data-no-characters] {
+            display: none;
+        }
+        
+        #some-hidden-info {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="lazyload.js"></script>
+    <header>
+        <h1>
                 Pebble Fonts
                 <grayed>as of SDK 3.8.2</grayed>
             </h1>
-            <h6 title="This is to reduce strain on GitHub's servers." id="some-hidden-info">
+        <h6 title="This is to reduce strain on GitHub's servers." id="some-hidden-info">
                 Some images are being excluded because they contain no characters. <a href="javascript:disableHiddens()">Show anyway?</a>
-            </h6>
-        </header>
-        <table>
-        <tr><td id="GOTHIC_09"><bookmark>Gothic</bookmark><a class="anchor" href="#GOTHIC_09"></a><grayed>FONT_KEY_</grayed>GOTHIC_09</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-9-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-9-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-9-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-9-emo.png" data-no-characters/></td></tr>
-        <tr><td id="GOTHIC_14"><a class="anchor" href="#GOTHIC_14"></a><grayed>FONT_KEY_</grayed>GOTHIC_14</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_14_BOLD"><a class="anchor" href="#GOTHIC_14_BOLD"></a><grayed>FONT_KEY_</grayed>GOTHIC_14_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-14b-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_18"><a class="anchor" href="#GOTHIC_18"></a><grayed>FONT_KEY_</grayed>GOTHIC_18</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_18_BOLD"><a class="anchor" href="#GOTHIC_18_BOLD"></a><grayed>FONT_KEY_</grayed>GOTHIC_18_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-18b-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_24"><a class="anchor" href="#GOTHIC_24"></a><grayed>FONT_KEY_</grayed>GOTHIC_24</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_24_BOLD"><a class="anchor" href="#GOTHIC_24_BOLD"></a><grayed>FONT_KEY_</grayed>GOTHIC_24_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-24b-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_28"><a class="anchor" href="#GOTHIC_28"></a><grayed>FONT_KEY_</grayed>GOTHIC_28</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28-emo.png"/></td></tr>
-        <tr><td id="GOTHIC_28_BOLD"><a class="anchor" href="#GOTHIC_28_BOLD"></a><grayed>FONT_KEY_</grayed>GOTHIC_28_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-28b-emo.png"/></td></tr>
-        <tr><td id="DROID_SERIF_28_BOLD"><bookmark>Droid</bookmark><a class="anchor" href="#DROID_SERIF_28_BOLD"></a><grayed>FONT_KEY_</grayed>DROID_SERIF_28_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/droid-28b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/droid-28b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/droid-28b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/droid-28b-emo.png"/></td></tr>
-        <tr><td id="ROBOTO_CONDENSED_21"><bookmark>Roboto</bookmark><a class="anchor" href="#ROBOTO_CONDENSED_21"></a><grayed>FONT_KEY_</grayed>ROBOTO_CONDENSED_21</td>
-        <td><img height="168" width="144" data-original="font_images/roboto-21c-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-21c-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-21c-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-21c-emo.png" data-no-characters/></td></tr>
-        <tr><td id="ROBOTO_BOLD_SUBSET_49"><a class="anchor" href="#ROBOTO_BOLD_SUBSET_49"></a><grayed>FONT_KEY_</grayed>ROBOTO_BOLD_SUBSET_49</td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_18_LIGHT_SUBSET"><bookmark>Bitham</bookmark><a class="anchor" href="#BITHAM_18_LIGHT_SUBSET"></a><grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-num.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-emo.png"/></td></tr>
-        <tr><td id="BITHAM_30_BLACK"><a class="anchor" href="#BITHAM_30_BLACK"></a><grayed>FONT_KEY_</grayed>BITHAM_30_BLACK</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-30k-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-30k-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-30k-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-30k-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_34_LIGHT_SUBSET"><a class="anchor" href="#BITHAM_34_LIGHT_SUBSET"></a><grayed>FONT_KEY_</grayed>BITHAM_34_LIGHT_SUBSET</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-num.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_34_MEDIUM_NUMBERS"><a class="anchor" href="#BITHAM_34_MEDIUM_NUMBERS"></a><grayed>FONT_KEY_</grayed>BITHAM_34_MEDIUM_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_42_BOLD"><a class="anchor" href="#BITHAM_42_BOLD"></a><grayed>FONT_KEY_</grayed>BITHAM_42_BOLD</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42b-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42b-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42b-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_42_LIGHT"><a class="anchor" href="#BITHAM_42_LIGHT"></a><grayed>FONT_KEY_</grayed>BITHAM_42_LIGHT</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42l-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42l-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42l-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42l-emo.png" data-no-characters/></td></tr>
-        <tr><td id="BITHAM_42_MEDIUM_NUMBERS"><a class="anchor" href="#BITHAM_42_MEDIUM_NUMBERS"></a><grayed>FONT_KEY_</grayed>BITHAM_42_MEDIUM_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_20_BOLD_NUMBERS"><bookmark>Leco</bookmark><a class="anchor" href="#LECO_20_BOLD_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_20_BOLD_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-20b-num-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-20b-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-20b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-20b-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_26_BOLD_NUMBERS_AM_PM"><a class="anchor" href="#LECO_26_BOLD_NUMBERS_AM_PM"></a><grayed>FONT_KEY_</grayed>LECO_26_BOLD_NUMBERS_AM_PM</td>
-        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-abc.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_28_LIGHT_NUMBERS"><a class="anchor" href="#LECO_28_LIGHT_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_28_LIGHT_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-28l-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-28l-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-28l-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-28l-num-emo.png"/></td></tr>
-        <tr><td id="LECO_32_BOLD_NUMBERS"><a class="anchor" href="#LECO_32_BOLD_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_32_BOLD_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_36_BOLD_NUMBERS"><a class="anchor" href="#LECO_36_BOLD_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_36_BOLD_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_38_BOLD_NUMBERS"><a class="anchor" href="#LECO_38_BOLD_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_38_BOLD_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-emo.png" data-no-characters/></td></tr>
-        <tr><td id="LECO_42_NUMBERS"><a class="anchor" href="#LECO_42_NUMBERS"></a><grayed>FONT_KEY_</grayed>LECO_42_NUMBERS</td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-abc.png" data-no-characters/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td></tr>
-        <tr><td colspan="5"><a href="https://developer.getpebble.com/guides/pebble-apps/resources/font-resources/#adding-a-custom-font-resource">Need more fonts?</a></td></tr></table>
-        <footer>
-            <a id="me" href="https://github.com/jneubrand">
-                <img data-original="jneubrand.png" id="avatar"/><span>@jneubrand</span>
-            </a><!-- and special thanks to iconmonstr! -->
-        </footer>
-        <script type="text/javascript">
-            var lazyloader = new LazyLoad({
-                throttle: 100
-            });
-            function disableHiddens() {
-                var ss = document.getElementById('no-chars-hide')
-                ss.parentElement.removeChild(ss);
-                lazyloader.update()
-            }
-        </script>
-    </body>
+            </h6> </header>
+    <table>
+        <tr>
+            <td id="GOTHIC_09">
+                <bookmark>Gothic</bookmark>
+                <a class="anchor" href="#GOTHIC_09"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_09</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-9-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-9-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-9-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-9-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_14">
+                <a class="anchor" href="#GOTHIC_14"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_14</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_14_BOLD">
+                <a class="anchor" href="#GOTHIC_14_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_14_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-14b-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_18">
+                <a class="anchor" href="#GOTHIC_18"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_18</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_18_BOLD">
+                <a class="anchor" href="#GOTHIC_18_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_18_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-18b-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_24">
+                <a class="anchor" href="#GOTHIC_24"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_24</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_24_BOLD">
+                <a class="anchor" href="#GOTHIC_24_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_24_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-24b-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_28">
+                <a class="anchor" href="#GOTHIC_28"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_28</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="GOTHIC_28_BOLD">
+                <a class="anchor" href="#GOTHIC_28_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>GOTHIC_28_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/gothic-28b-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="DROID_SERIF_28_BOLD">
+                <bookmark>Droid</bookmark>
+                <a class="anchor" href="#DROID_SERIF_28_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>DROID_SERIF_28_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/droid-28b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/droid-28b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/droid-28b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/droid-28b-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="ROBOTO_CONDENSED_21">
+                <bookmark>Roboto</bookmark>
+                <a class="anchor" href="#ROBOTO_CONDENSED_21"></a>
+                <grayed>FONT_KEY_</grayed>ROBOTO_CONDENSED_21</td>
+            <td><img height="168" width="144" data-original="font_images/roboto-21c-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-21c-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-21c-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-21c-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="ROBOTO_BOLD_SUBSET_49">
+                <a class="anchor" href="#ROBOTO_BOLD_SUBSET_49"></a>
+                <grayed>FONT_KEY_</grayed>ROBOTO_BOLD_SUBSET_49</td>
+            <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_18_LIGHT_SUBSET">
+                <bookmark>Bitham</bookmark>
+                <a class="anchor" href="#BITHAM_18_LIGHT_SUBSET"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-num.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_30_BLACK">
+                <a class="anchor" href="#BITHAM_30_BLACK"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_30_BLACK</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-30k-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-30k-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-30k-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-30k-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_34_LIGHT_SUBSET">
+                <a class="anchor" href="#BITHAM_34_LIGHT_SUBSET"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_34_LIGHT_SUBSET</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-num.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_34_MEDIUM_NUMBERS">
+                <a class="anchor" href="#BITHAM_34_MEDIUM_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_34_MEDIUM_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34m-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34m-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34m-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-34m-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_42_BOLD">
+                <a class="anchor" href="#BITHAM_42_BOLD"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_42_BOLD</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42b-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42b-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42b-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42b-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_42_LIGHT">
+                <a class="anchor" href="#BITHAM_42_LIGHT"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_42_LIGHT</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42l-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42l-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42l-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42l-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="BITHAM_42_MEDIUM_NUMBERS">
+                <a class="anchor" href="#BITHAM_42_MEDIUM_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>BITHAM_42_MEDIUM_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42m-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42m-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42m-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/bitham-42m-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_20_BOLD_NUMBERS">
+                <bookmark>Leco</bookmark>
+                <a class="anchor" href="#LECO_20_BOLD_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_20_BOLD_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-20b-num-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-20b-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-20b-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-20b-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_26_BOLD_NUMBERS_AM_PM">
+                <a class="anchor" href="#LECO_26_BOLD_NUMBERS_AM_PM"></a>
+                <grayed>FONT_KEY_</grayed>LECO_26_BOLD_NUMBERS_AM_PM</td>
+            <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-abc.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_28_LIGHT_NUMBERS">
+                <a class="anchor" href="#LECO_28_LIGHT_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_28_LIGHT_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-28l-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/leco-28l-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-28l-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-28l-num-emo.png" /></td>
+        </tr>
+        <tr>
+            <td id="LECO_32_BOLD_NUMBERS">
+                <a class="anchor" href="#LECO_32_BOLD_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_32_BOLD_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-32b-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/leco-32b-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-32b-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-32b-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_36_BOLD_NUMBERS">
+                <a class="anchor" href="#LECO_36_BOLD_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_36_BOLD_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-36b-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/leco-36b-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-36b-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-36b-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_38_BOLD_NUMBERS">
+                <a class="anchor" href="#LECO_38_BOLD_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_38_BOLD_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-38b-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/leco-38b-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-38b-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-38b-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td id="LECO_42_NUMBERS">
+                <a class="anchor" href="#LECO_42_NUMBERS"></a>
+                <grayed>FONT_KEY_</grayed>LECO_42_NUMBERS</td>
+            <td><img height="168" width="144" data-original="font_images/leco-42-num-abc.png" data-no-characters/></td>
+            <td><img height="168" width="144" data-original="font_images/leco-42-num-num.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-42-num-sym.png" /></td>
+            <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td>
+        </tr>
+        <tr>
+            <td colspan="5"><a href="https://developer.getpebble.com/guides/pebble-apps/resources/font-resources/#adding-a-custom-font-resource">Need more fonts?</a></td>
+        </tr>
+    </table>
+    <footer>
+        <a id="me" href="https://github.com/jneubrand"> <img data-original="jneubrand.png" id="avatar" /><span>@jneubrand</span> </a>
+        <!-- and special thanks to iconmonstr! -->
+    </footer>
+    <script type="text/javascript">
+        var lazyloader = new LazyLoad({
+            throttle: 100
+        });
+
+        function disableHiddens() {
+            var ss = document.getElementById('no-chars-hide')
+            ss.parentElement.removeChild(ss);
+            lazyloader.update()
+        }
+    </script>
+</body>
+
 </html>
