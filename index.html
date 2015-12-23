@@ -10,11 +10,24 @@
             }
             td {
                 vertical-align: middle;
+                font-weight: 900;
+                border: none;
                 border-bottom: 1px solid #DDDDDD;
+                padding: 1em;
+            }
+            td:not(:last-child) {
+                border-right: 1px dotted #DDDDDD;
+            }
+            h1 {
+                vertical-align: middle;
+                border-bottom: 1px solid #DDDDDD;
+                padding: 1.5em 1em 1em;
+                text-align: center;
                 font-weight: 900;
             }
             table {
                 margin: 0 auto;
+                border-collapse: collapse;
             }
             img.loading {
                 box-shadow: 0 0 10px 0 #DDDDDD;
@@ -27,7 +40,10 @@
     </head>
     <body>
         <script type="text/javascript" src="lazyload.js"></script>
-        As of SDK 3.8.2
+        <h1>
+            Pebble Fonts
+            <grayed>as of SDK 3.8.2</grayed>
+        </h1>
         <table><tr><td><grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET</td>
         <td><img height="168" width="144" data-original="bitham-18l-subset-abc.png"/></td>
         <td><img height="168" width="144" data-original="bitham-18l-subset-num.png"/></td>
