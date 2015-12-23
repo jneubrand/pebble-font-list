@@ -26,6 +26,12 @@
             }
             #some-hidden-info {
                 display: none;
+                font-weight: 300;
+            }
+            #some-hidden-info a {
+                color: black;
+                text-decoration: none;
+                border-bottom: 1px dotted #888888;
             }
             header {
                 border-bottom: 1px solid gainsboro;
@@ -39,28 +45,28 @@
                 text-align: center;
                 font-weight: 900;
             }
-            footer a {
+            a#me {
                 display: inline-block;
                 background-color: gainsboro;
-                background-image: linear-gradient(to bottom, #DDDDDD, #CCCCCC);
+                background-image: linear-gradient(to bottom, #333, #222);
                 padding: 2em;
                 border-radius: 2em 2em;
                 text-decoration: none;
             }
-            footer a:hover {
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1)
+            a#me:hover {
+                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
             }
-            footer a:active {
-                background-image: linear-gradient(to bottom, #CCCCCC, #BBBBBB);
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1)
+            a#me:active {
+                background-image: linear-gradient(to bottom, #222, #111);
+                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
             }
-            footer a:focus {
+            a#me:focus {
                 outline: none;
-                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1)
+                box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1)
             }
             footer span {
-                text-shadow: 0 1px 0 white;
-                color: #444444;
+                text-shadow: 0 2px 0 black;
+                color: #BBBBBB;
             }
             footer img {
                 vertical-align: middle;
@@ -302,7 +308,7 @@
         <td><img height="168" width="144" data-original="font_images/leco-42-num-sym.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td></tr></table>
         <footer>
-            <a href="https://github.com/jneubrand">
+            <a id="me" href="https://github.com/jneubrand">
                 <img data-original="jneubrand.png" id="avatar"/><span>@jneubrand</span>
             </a><!-- and special thanks to iconmonstr! -->
         </footer>
