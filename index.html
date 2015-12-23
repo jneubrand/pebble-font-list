@@ -22,6 +22,12 @@
                 border-right: 1px dotted gainsboro;
             }
             h1 {
+                font-size: 3rem;
+            }
+            h6[data-no-characters] {
+                display: none;
+            }
+            header {
                 border-bottom: 1px solid gainsboro;
                 padding: 1.5em 1em 1em;
                 text-align: center;
@@ -133,19 +139,40 @@
                 }
             }
         </style>
+        <style id="no-chars-hide">
+            img[data-no-characters] {
+                display: none;
+            }
+            h6[data-no-characters] {
+                display: block;
+            }
+        </style>
+        <script>
+            function disableHiddens() {
+                var ss = document.getElementById('no-chars-hide')
+                ss.parentElement.removeChild(ss);
+                window.scroll(window.scrollX, window.scrollY - 1);
+                window.scroll(window.scrollX, window.scrollY + 1);
+            }
+        </script>
     </head>
     <body>
         <script type="text/javascript" src="lazyload.js"></script>
-        <h1>
-            Pebble Fonts
-            <grayed>as of SDK 3.8.2</grayed>
-        </h1>
+        <header>
+            <h1>
+                Pebble Fonts
+                <grayed>as of SDK 3.8.2</grayed>
+            </h1>
+            <h6 title="This is to reduce strain on GitHub's servers." data-no-characters>
+                Some images are being excluded because they contain no characters. <a href="javascript:disableHiddens()">Show anyway?</a>
+            </h6>
+        </header>
         <table>
         <tr><td id="GOTHIC_09"><bookmark>Gothic</bookmark><grayed>FONT_KEY_</grayed>GOTHIC_09 <a class="anchor" href="#GOTHIC_09"></a></td>
         <td><img height="168" width="144" data-original="font_images/gothic-9-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/gothic-9-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/gothic-9-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/gothic-9-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/gothic-9-emo.png" data-no-characters/></td></tr>
         <tr><td id="GOTHIC_14"><grayed>FONT_KEY_</grayed>GOTHIC_14 <a class="anchor" href="#GOTHIC_14"></a></td>
         <td><img height="168" width="144" data-original="font_images/gothic-14-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/gothic-14-num.png"/></td>
@@ -195,12 +222,12 @@
         <td><img height="168" width="144" data-original="font_images/roboto-21c-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/roboto-21c-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/roboto-21c-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-21c-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/roboto-21c-emo.png" data-no-characters/></td></tr>
         <tr><td id="ROBOTO_BOLD_SUBSET_49"><grayed>FONT_KEY_</grayed>ROBOTO_BOLD_SUBSET_49 <a class="anchor" href="#ROBOTO_BOLD_SUBSET_49"></a></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/roboto-49b-subset-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_18_LIGHT_SUBSET"><bookmark>Bitham</bookmark><grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET <a class="anchor" href="#BITHAM_18_LIGHT_SUBSET"></a></td>
         <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-18l-subset-num.png"/></td>
@@ -210,67 +237,67 @@
         <td><img height="168" width="144" data-original="font_images/bitham-30k-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-30k-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-30k-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-30k-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-30k-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_34_LIGHT_SUBSET"><grayed>FONT_KEY_</grayed>BITHAM_34_LIGHT_SUBSET <a class="anchor" href="#BITHAM_34_LIGHT_SUBSET"></a></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-34l-subset-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_34_MEDIUM_NUMBERS"><grayed>FONT_KEY_</grayed>BITHAM_34_MEDIUM_NUMBERS <a class="anchor" href="#BITHAM_34_MEDIUM_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-34m-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-34m-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-34m-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_42_BOLD"><grayed>FONT_KEY_</grayed>BITHAM_42_BOLD <a class="anchor" href="#BITHAM_42_BOLD"></a></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42b-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42b-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42b-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42b-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-42b-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_42_LIGHT"><grayed>FONT_KEY_</grayed>BITHAM_42_LIGHT <a class="anchor" href="#BITHAM_42_LIGHT"></a></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42l-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42l-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42l-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42l-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-42l-emo.png" data-no-characters/></td></tr>
         <tr><td id="BITHAM_42_MEDIUM_NUMBERS"><grayed>FONT_KEY_</grayed>BITHAM_42_MEDIUM_NUMBERS <a class="anchor" href="#BITHAM_42_MEDIUM_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42m-num-sym.png"/></td>
         <td><img height="168" width="144" data-original="font_images/bitham-42m-num-num.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/bitham-42m-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_20_BOLD_NUMBERS"><bookmark>Leco</bookmark><grayed>FONT_KEY_</grayed>LECO_20_BOLD_NUMBERS <a class="anchor" href="#LECO_20_BOLD_NUMBERS"></a></td>
         <td><img height="168" width="144" data-original="font_images/leco-20b-num-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-20b-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-20b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-20b-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/leco-20b-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_26_BOLD_NUMBERS_AM_PM"><grayed>FONT_KEY_</grayed>LECO_26_BOLD_NUMBERS_AM_PM <a class="anchor" href="#LECO_26_BOLD_NUMBERS_AM_PM"></a></td>
         <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-abc.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/leco-26b-ampm-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_28_LIGHT_NUMBERS"><grayed>FONT_KEY_</grayed>LECO_28_LIGHT_NUMBERS <a class="anchor" href="#LECO_28_LIGHT_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/leco-28l-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/leco-28l-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-28l-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-28l-num-sym.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-28l-num-emo.png"/></td></tr>
         <tr><td id="LECO_32_BOLD_NUMBERS"><grayed>FONT_KEY_</grayed>LECO_32_BOLD_NUMBERS <a class="anchor" href="#LECO_32_BOLD_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/leco-32b-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-32b-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-32b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-32b-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/leco-32b-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_36_BOLD_NUMBERS"><grayed>FONT_KEY_</grayed>LECO_36_BOLD_NUMBERS <a class="anchor" href="#LECO_36_BOLD_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/leco-36b-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-36b-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-36b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-36b-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/leco-36b-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_38_BOLD_NUMBERS"><grayed>FONT_KEY_</grayed>LECO_38_BOLD_NUMBERS <a class="anchor" href="#LECO_38_BOLD_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/leco-38b-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-38b-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-38b-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-38b-num-emo.png"/></td></tr>
+        <td><img height="168" width="144" data-original="font_images/leco-38b-num-emo.png" data-no-characters/></td></tr>
         <tr><td id="LECO_42_NUMBERS"><grayed>FONT_KEY_</grayed>LECO_42_NUMBERS <a class="anchor" href="#LECO_42_NUMBERS"></a></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-abc.png"/></td>
+        <td><img height="168" width="144" data-original="font_images/leco-42-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-42-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-42-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png"/></td></tr></table>
+        <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td></tr></table>
         <footer>
             <a href="https://github.com/jneubrand">
                 <img data-original="jneubrand.png" id="avatar"/><span>@jneubrand</span>
