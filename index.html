@@ -24,7 +24,7 @@
             h1 {
                 font-size: 3rem;
             }
-            h6[data-no-characters] {
+            #some-hidden-info {
                 display: none;
             }
             header {
@@ -154,18 +154,10 @@
             img[data-no-characters] {
                 display: none;
             }
-            h6[data-no-characters] {
+            #some-hidden-info {
                 display: block;
             }
         </style>
-        <script>
-            function disableHiddens() {
-                var ss = document.getElementById('no-chars-hide')
-                ss.parentElement.removeChild(ss);
-                window.scroll(window.scrollX, window.scrollY - 1);
-                window.scroll(window.scrollX, window.scrollY + 1);
-            }
-        </script>
     </head>
     <body>
         <script type="text/javascript" src="lazyload.js"></script>
@@ -174,7 +166,7 @@
                 Pebble Fonts
                 <grayed>as of SDK 3.8.2</grayed>
             </h1>
-            <h6 title="This is to reduce strain on GitHub's servers." data-no-characters>
+            <h6 title="This is to reduce strain on GitHub's servers." id="some-hidden-info">
                 Some images are being excluded because they contain no characters. <a href="javascript:disableHiddens()">Show anyway?</a>
             </h6>
         </header>
@@ -318,6 +310,11 @@
             var lazyloader = new LazyLoad({
                 throttle: 100
             });
+            function disableHiddens() {
+                var ss = document.getElementById('no-chars-hide')
+                ss.parentElement.removeChild(ss);
+                lazyloader.update()
+            }
         </script>
     </body>
 </html>
