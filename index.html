@@ -16,11 +16,17 @@
                 padding: 1em;
                 position: relative;
             }
-            tr:last-child td {
-                border-bottom: none;
-            }
             td:not(:last-child) {
                 border-right: 1px dotted gainsboro;
+            }
+            tr:last-child td {
+                text-align: center;
+                border-bottom: none;
+                padding: 2em 0 6em;
+            }
+            tr:last-child td a {
+                font-style: italic;
+                font-weight: 100;
             }
             h1 {
                 font-size: 3rem;
@@ -29,7 +35,7 @@
                 display: none;
                 font-weight: 300;
             }
-            #some-hidden-info a {
+            #some-hidden-info a, td:last-child a {
                 color: black;
                 text-decoration: none;
                 border-bottom: 1px dotted #888888;
@@ -308,7 +314,8 @@
         <td><img height="168" width="144" data-original="font_images/leco-42-num-abc.png" data-no-characters/></td>
         <td><img height="168" width="144" data-original="font_images/leco-42-num-num.png"/></td>
         <td><img height="168" width="144" data-original="font_images/leco-42-num-sym.png"/></td>
-        <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td></tr></table>
+        <td><img height="168" width="144" data-original="font_images/leco-42-num-emo.png" data-no-characters/></td></tr>
+        <tr><td colspan="5"><a href="https://developer.getpebble.com/guides/pebble-apps/resources/font-resources/#adding-a-custom-font-resource">Need more fonts?</a></td></tr></table>
         <footer>
             <a id="me" href="https://github.com/jneubrand">
                 <img data-original="jneubrand.png" id="avatar"/><span>@jneubrand</span>
