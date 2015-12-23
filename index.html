@@ -12,15 +12,16 @@
                 vertical-align: middle;
                 font-weight: 900;
                 border: none;
-                border-bottom: 1px solid #DDDDDD;
+                border-bottom: 1px solid gainsboro;
                 padding: 1em;
+                position: relative;
             }
             td:not(:last-child) {
-                border-right: 1px dotted #DDDDDD;
+                border-right: 1px dotted gainsboro;
             }
             h1 {
                 vertical-align: middle;
-                border-bottom: 1px solid #DDDDDD;
+                border-bottom: 1px solid gainsboro;
                 padding: 1.5em 1em 1em;
                 text-align: center;
                 font-weight: 900;
@@ -30,7 +31,40 @@
                 border-collapse: collapse;
             }
             img.loading {
-                box-shadow: 0 0 10px 0 #DDDDDD;
+                box-shadow: 0 0 10px 0 gainsboro;
+            }
+            bookmark {
+                position: absolute;
+                right: 100%;
+                height: 28px;
+                line-height: 28px;
+                margin-top: calc((1em - 24px)/2);
+                padding: 0 8px;
+                background-color: darkred;
+                color: white;
+            }
+            bookmark:before {
+                content: " ";
+                height: 0;
+                display: inline-block;
+                position: absolute;
+                left: -14px;
+                z-index: -1;
+                border-top: 14px solid darkred;
+                border-right: none;
+                border-bottom: 14px solid darkred;
+                border-left: 14px solid transparent;
+            }
+            bookmark:after {
+                content: " ";
+                height: 48px;
+                width: 10px;
+                box-shadow: -5px 0 3px -4px rgba(0, 0, 0, 0.2);
+                display: inline-block;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                background-color: transparent;
             }
             grayed {
                 color: #BBBBBB;
@@ -45,7 +79,7 @@
             <grayed>as of SDK 3.8.2</grayed>
         </h1>
         <table>
-        <tr><td><grayed>FONT_KEY_</grayed>GOTHIC_09</td>
+        <tr><td><bookmark>Gothic</bookmark><grayed>FONT_KEY_</grayed>GOTHIC_09</td>
         <td><img height="168" width="144" data-original="gothic-9-abc.png"/></td>
         <td><img height="168" width="144" data-original="gothic-9-num.png"/></td>
         <td><img height="168" width="144" data-original="gothic-9-sym.png"/></td>
@@ -90,12 +124,12 @@
         <td><img height="168" width="144" data-original="gothic-28b-num.png"/></td>
         <td><img height="168" width="144" data-original="gothic-28b-sym.png"/></td>
         <td><img height="168" width="144" data-original="gothic-28b-emo.png"/></td></tr>
-        <tr><td><grayed>FONT_KEY_</grayed>DROID_SERIF_28_BOLD</td>
+        <tr><td><bookmark>Droid</bookmark><grayed>FONT_KEY_</grayed>DROID_SERIF_28_BOLD</td>
         <td><img height="168" width="144" data-original="droid-28b-abc.png"/></td>
         <td><img height="168" width="144" data-original="droid-28b-num.png"/></td>
         <td><img height="168" width="144" data-original="droid-28b-sym.png"/></td>
         <td><img height="168" width="144" data-original="droid-28b-emo.png"/></td></tr>
-        <tr><td><grayed>FONT_KEY_</grayed>ROBOTO_CONDENSED_21</td>
+        <tr><td><bookmark>Roboto</bookmark><grayed>FONT_KEY_</grayed>ROBOTO_CONDENSED_21</td>
         <td><img height="168" width="144" data-original="roboto-21c-abc.png"/></td>
         <td><img height="168" width="144" data-original="roboto-21c-num.png"/></td>
         <td><img height="168" width="144" data-original="roboto-21c-sym.png"/></td>
@@ -105,7 +139,7 @@
         <td><img height="168" width="144" data-original="roboto-49b-subset-num.png"/></td>
         <td><img height="168" width="144" data-original="roboto-49b-subset-sym.png"/></td>
         <td><img height="168" width="144" data-original="roboto-49b-subset-emo.png"/></td></tr>
-        <tr><td><grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET</td>
+        <tr><td><bookmark>Bitham</bookmark><grayed>FONT_KEY_</grayed>BITHAM_18_LIGHT_SUBSET</td>
         <td><img height="168" width="144" data-original="bitham-18l-subset-abc.png"/></td>
         <td><img height="168" width="144" data-original="bitham-18l-subset-num.png"/></td>
         <td><img height="168" width="144" data-original="bitham-18l-subset-sym.png"/></td>
@@ -140,7 +174,7 @@
         <td><img height="168" width="144" data-original="bitham-42m-num-sym.png"/></td>
         <td><img height="168" width="144" data-original="bitham-42m-num-num.png"/></td>
         <td><img height="168" width="144" data-original="bitham-42m-num-emo.png"/></td></tr>
-        <tr><td><grayed>FONT_KEY_</grayed>LECO_20_BOLD_NUMBERS</td>
+        <tr><td><bookmark>Leco</bookmark><grayed>FONT_KEY_</grayed>LECO_20_BOLD_NUMBERS</td>
         <td><img height="168" width="144" data-original="leco-20b-num-abc.png"/></td>
         <td><img height="168" width="144" data-original="leco-20b-num-num.png"/></td>
         <td><img height="168" width="144" data-original="leco-20b-num-sym.png"/></td>
