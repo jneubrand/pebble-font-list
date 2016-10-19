@@ -38,6 +38,16 @@ var skip = [
     'roboto_bold_subset_49_latin',
 ]
 
+var flags = {
+    'gothic_14': ['emoji-s'], 'gothic_14_bold': ['emoji-s'],
+    'gothic_18': ['emoji-s'], 'gothic_18_bold': ['emoji-s'],
+    'gothic_24': ['emoji-l'], 'gothic_24_bold': ['emoji-l'],
+    'gothic_28': ['emoji-l'], 'gothic_28_bold': ['emoji-l'],
+    'droid_serif_28_bold': ['emoji-l'],
+    'bitham_18_light_subset': ['emoji-s'],
+    'leco_28_light_numbers': ['emoji-l']
+}
+
 var fonts = {
     "gothic": [
         "09",
@@ -111,7 +121,10 @@ for (var family in fonts) {
         }
         var metaEl = document.createElement('p')
         metaEl.classList.add('metadata')
-        metaEl.innerHTML = '<span class="friendly">' +
+        if (family + '_' + fonts[family][style] in flags) {
+            metaEl.classList.add(flags[family + '_' + fonts[family][style]])
+        }
+        metaEl.innerHTML += '<span class="friendly">' +
                 family.replace(/_/g, ' ') + ' ' +
                 fonts[family][style].replace(/_/g, ' ') +
             '</span> <span class="technical">' +

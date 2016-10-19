@@ -230,6 +230,7 @@ figure.focused div.image-wrapper {
 
 figure div.image-wrapper {
     min-width: 216px;
+    background-color: black;
 }
 
 figure div.image-wrapper + div.image-wrapper {
@@ -247,4 +248,11 @@ figure div.image-wrapper:last-of-type {
 
 figure img {
     border: 8px solid black;
+}
+
+figure .metadata.emoji-s,
+figure .metadata.emoji-l {
+    background-image: url(emoji.svg);
+    background-position: 8px 50%;
+    background-repeat: no-repeat;
 }
