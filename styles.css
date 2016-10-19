@@ -152,7 +152,7 @@ figure {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    transition: margin 0.1s ease, height 0.1s ease;
+    transition: margin 0.15s ease, height 0.15s ease;
 }
 
 figure.focused {
@@ -163,7 +163,7 @@ figure.focused {
 figure.one-img img {
     border-top: 2px solid black;
     border-bottom: 40px solid black;
-    transition: border 0.1s ease;
+    transition: border 0.15s ease;
 }
 
 figure.focused.one-img img {
@@ -181,7 +181,7 @@ figure p.metadata {
 }
 
 figure p.metadata > span {
-    transition: height 0.1s ease;
+    transition: height 0.3s ease;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -220,7 +220,7 @@ figure div.image-wrapper {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     overflow: hidden;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.15s ease;
     box-shadow: 0 0 20px rgba(64, 64, 64, 0.6);
 }
 
@@ -255,4 +255,10 @@ figure .metadata.emoji-l {
     background-image: url(emoji.svg);
     background-position: 8px 50%;
     background-repeat: no-repeat;
+    transition: background-position 0.15s ease;
+}
+
+figure.focused .metadata.emoji-s,
+figure.focused .metadata.emoji-l {
+    background-position: 0 50%;
 }
