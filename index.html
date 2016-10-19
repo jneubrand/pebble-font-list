@@ -96,10 +96,11 @@
                     el.addEventListener('click', function(e) {
                         var id = el.id
                         el.id = ''
-                        if (document.location.hash == '#' + id)
-                            document.location.hash = '#-'
-                        else
-                            document.location.hash = '#' + id
+                        if (document.location.hash == '#' + id) {
+                            location.replace('#-')
+                        } else {
+                            location.replace('#' + id)
+                        }
                         for (var i = 0; i < figures.length; i++)
                             figures[i].classList.remove('focused')
                         if (document.location.hash == '#' + id)
