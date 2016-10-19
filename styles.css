@@ -138,10 +138,31 @@ section h2 {
     font-size: 2rem;
 }
 
-section > pre {
-    margin: 2rem auto 1rem;
-    padding: 0 1rem;
-    white-space: pre-wrap;
+section .emojilist {
+    margin: 0 1rem;
+    padding: 1rem;
+    font-size: 0;
+    border-radius: 5px;
+    background-color: #F8F8F8;
+}
+
+section .emojilist span {
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #DDDDDD;
+}
+
+section #emoji-l1:not(.focused) ~ #emoji-l1-list {
+    display: none;
+}
+section #emoji-l2:not(.focused) ~ #emoji-l2-list {
+    display: none;
+}
+section #emoji-s:not(.focused) ~ #emoji-s-list {
+    display: none;
 }
 
 figure {
